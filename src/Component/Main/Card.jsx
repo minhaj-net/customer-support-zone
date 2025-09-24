@@ -1,20 +1,24 @@
-const Card = ({ fetchData }) => {
+const Card = ({ fetchData, setSelected, selected }) => {
   const data = fetchData;
-  const handleCardClick = () => {
-    console.log(data);
+
+  const handleCardClick = (id) => {
+    setSelected(id);
   };
-  // console.log(data);
+  const filteredTickets = selected
+    ? data.filter((t) => t.id === selected)
+    : data;
+  console.log(filteredTickets);
   return (
     <div className="">
       <h1 className="text-[#34485A] font-semibold text-2xl">
         Customer Tickets{" "}
       </h1>
-      <div
-        onClick={() => handleCardClick()}
-        className="grid lg:grid-cols-2 gap-4"
-      >
+      <div className="grid lg:grid-cols-2 gap-4">
         {data.map((ticket) => (
-          <div className=" mt-6 bg-[#FFFFFF] shadow-2xl p-5 rounded-xl">
+          <div
+            onClick={() => handleCardClick(ticket)}
+            className=" mt-6 bg-[#FFFFFF] shadow-2xl p-5 rounded-xl"
+          >
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-medium text-[#001931] text-lg">
                 {ticket.title}

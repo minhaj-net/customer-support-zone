@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import "./App.css";
 import Main from "./Component/Main/Main";
 import Navbar from "./Component/Navbar";
@@ -15,7 +16,9 @@ function App() {
   return (
     <>
       <Navbar></Navbar>
-      <Main PromiseData={PromiseData}></Main>
+      <Suspense fallback={<div>Loading...</div>}>
+        <Main PromiseData={PromiseData}></Main>
+      </Suspense>
     </>
   );
 }
