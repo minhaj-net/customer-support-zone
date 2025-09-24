@@ -1,0 +1,128 @@
+[
+  {
+    "id": "#1001",
+    "title": "Login Issue - Cannot access",
+    "description": "Customer is unable to log into the account after resetting the password. They keep receiving an error message during login attempts.",
+    "customer": "John Doe",
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": "#1002",
+    "title": "Payment Failure - Transaction pending",
+    "description": "Payment for the last order did not go through successfully. Customer’s bank account shows a pending transaction.",
+    "customer": "Emily Clark",
+    "priority": "Medium Priority",
+    "status": "Open",
+    "createdAt": "2025-09-21"
+  },
+  {
+    "id": "#1003",
+    "title": "Shipping Delay - Package not arrived",
+    "description": "The package has not arrived even after 7 days of dispatch. Customer is concerned about the delivery status.",
+    "customer": "Michael Smith",
+    "priority": "Low Priority",
+    "status": "In-Progress",
+    "createdAt": "2025-09-18"
+  },
+  {
+    "id": "#1004",
+    "title": "Refund Request - Defective product",
+    "description": "Customer requested a refund due to receiving a defective product. They also asked for an update on the refund timeline.",
+    "customer": "Sophia Johnson",
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2025-09-15"
+  },
+  {
+    "id": "#1005",
+    "title": "Feature Inquiry - Bulk order",
+    "description": "Customer wants to know if a bulk order feature is available in the system. They are considering placing a large order next month.",
+    "customer": "Liam Brown",
+    "priority": "Low Priority",
+    "status": "Open",
+    "createdAt": "2025-09-10"
+  },
+  {
+    "id": "#1006",
+    "title": "Password Reset Not Working",
+    "description": "Customer tried resetting the password but the link has expired. They need assistance generating a new reset link.",
+    "customer": "Olivia Davis",
+    "priority": "High Priority",
+    "status": "In-Progress",
+    "createdAt": "2025-09-19"
+  },
+  {
+    "id": "#1007",
+    "title": "Account Locked - Cannot login",
+    "description": "Customer’s account was locked after multiple failed login attempts. They need the support team to unlock it.",
+    "customer": "Ethan Wilson",
+    "priority": "Medium Priority",
+    "status": "Open",
+    "createdAt": "2025-09-17"
+  },
+  {
+    "id": "#1008",
+    "title": "Order Cancellation - Refund requested",
+    "description": "Customer requested cancellation of an order placed by mistake. They also want confirmation that payment will be refunded.",
+    "customer": "Ava Martinez",
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2025-09-14"
+  },
+  {
+    "id": "#1009",
+    "title": "App Crash - Cannot use features",
+    "description": "Mobile app crashes immediately after opening. Customer is unable to use any of the features properly.",
+    "customer": "Noah Taylor",
+    "priority": "High Priority",
+    "status": "In-Progress",
+    "createdAt": "2025-09-22"
+  },
+  {
+    "id": "#1010",
+    "title": "Subscription Inquiry - Premium plans",
+    "description": "Customer wants to know details about premium subscription plans. They also asked if there is a student discount available.",
+    "customer": "Mia Anderson",
+    "priority": "Low Priority",
+    "status": "Open",
+    "createdAt": "2025-09-11"
+  },
+  {
+    "id": "#1011",
+    "title": "Email Not Received ",
+    "description": "Customer did not receive the order confirmation email. They have checked the spam folder but nothing is there.",
+    "customer": "James Thomas",
+    "priority": "Medium Priority",
+    "status": "Open",
+    "createdAt": "2025-09-20"
+  },
+  {
+    "id": "#1012",
+    "title": "Wrong Item Delivered - Exchange requested",
+    "description": "Customer received the wrong product in their shipment. They are requesting an exchange or refund as soon as possible.",
+    "customer": "Isabella White",
+    "priority": "High Priority",
+    "status": "Open",
+    "createdAt": "2025-09-16"
+  },
+  {
+    "id": "#1013",
+    "title": "App Slow Performance - lagging",
+    "description": "Customer reported that the app is taking too long to load pages. They also noticed frequent lag during checkout.",
+    "customer": "Lucas Harris",
+    "priority": "Medium Priority",
+    "status": "In-Progress",
+    "createdAt": "2025-09-19"
+  },
+  {
+    "id": "#1014",
+    "title": "Discount Code Not Applied",
+    "description": "Customer tried applying a discount code during checkout but it did not work. They want to know if the code is still valid.",
+    "customer": "Amelia Scott",
+    "priority": "Low Priority",
+    "status": "Open",
+    "createdAt": "2025-09-13"
+  }
+]
