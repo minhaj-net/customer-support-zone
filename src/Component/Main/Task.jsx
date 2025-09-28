@@ -1,31 +1,59 @@
 import React from "react";
+import { useState } from "react";
 
-const task = ({ selected, showSameTicket }) => {
-  console.log(selected);
+const Task = ({ selected, clearTask }) => {
+  const [movedTasks, setMovedTasks] = useState([]);
+  const handleMove = () => {
+    if (selected) {
+      setMovedTasks([...movedTasks, selected]); // আগেরগুলো রেখে নতুনটা add
+      clearTask(); // selected টাস্ক ক্লিয়ার কর
+    }
+  };
+  if (!selected || selected.length === 0) {
+    return null;
+  }
+
   return (
-    <div>
-      <h3 className="text-[#34485A] font-semibold text-2xl">Task Status</h3>
-      <div className="p-5 bg-[#FFFFFF] shadow-2xl rounded-xl mt-6">
-        <h2 className="mb-3 text-[#001931] font-medium text-lg">
-          {selected ? selected.title : "No Task Selected"}
-        </h2>
-        <button
-          onClick={showSameTicket}
-          className="btn btn-block !bg-[#02A53B] text-white"
-        >
-          Complete
-        </button>
-      </div>
-      <div className="mt-16">
-        <h2 className="mb-3 text-[#001931] font-medium text-2xl">
-          Resolved Task
-        </h2>
-        <div className="p-5 bg-[#e0e7ff] bg-opacity-30 shadow-2xl rounded-xl mt-6">
-          <p> {selected ? selected.title : "No Task Selected"}</p>
+    <div className="space-y-4">
+      {selected ? (
+        <>
+          {selected.map((ticket, index) => (
+            <div
+              key={index}
+              className="p-4   shadow-lg bg-white rounded-2xl mt-3"
+            >
+              <h3 className="text-[#001931] text-lg">{ticket.title}</h3>
+              <button
+                onClick={handleMove}
+                className="btn btn-wide mt-3 !rounded-lg !bg-[#02A53B] text-white"
+              >
+                Complete
+              </button>
+            </div>
+          ))}
+        </>
+      ) : (
+        <p>No task selected</p>
+      )}
+      {movedTasks.length > 0 && (
+        <div className="mt-6 border-t pt-4">
+          <h3 className="text-lg font-semibold mb-2">Moved Tasks</h3>
+          <ul className="space-y-2">
+            {movedTasks.map((task, index) => (
+              <li
+                key={index}
+                className="p-3 border rounded bg-gray-50 shadow-sm"
+              >
+                <h4 className="font-bold">{task.title}</h4>
+                <p className="text-sm">{task.description}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
+      )}
     </div>
+
+    //retunrn end
   );
 };
-
-export default task;
+export default Task;

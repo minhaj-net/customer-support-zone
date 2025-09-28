@@ -4,24 +4,19 @@ import Task from "./task";
 import { useState } from "react";
 
 const TicketCard = ({ fetchData }) => {
-  const prop = (id) => {
-    console.log(id);
+  const [selected, setSelected] = useState([]);
+  const showSameTicket = (fetchData) => {
+    setSelected((prev) => [...prev, fetchData]);
   };
-  const [selected, setSelected] = useState(null);
-  const showSameTicket = () => {
-    setSelected({ ...selected }); // শুধু আগের selected ticket
-  };
+  const clearTask = () => setSelected(null);
   return (
     <div className="max-w-[1280px] mx-auto grid   grid-cols-12 gap-6 mt-12">
       <div className="col-span-12 lg:col-span-9">
-        <Card
-          prop={prop}
-          fetchData={fetchData}
-          setSelected={setSelected}
-        ></Card>
+        <Card fetchData={fetchData} showSameTicket={showSameTicket}></Card>
       </div>
       <div className="col-span-12 lg:col-span-3 ">
-        <Task showSameTicket={showSameTicket} selected={selected}></Task>
+        <h2 className="text-[#34485A] font-bold text-2xl ">Task Status</h2>
+        <Task clearTask={clearTask} selected={selected}></Task>
       </div>
     </div>
   );

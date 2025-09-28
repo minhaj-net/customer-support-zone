@@ -1,9 +1,10 @@
-const Card = ({ fetchData, setSelected, selected }) => {
+import React from "react";
+const Card = ({ fetchData, selected, showSameTicket }) => {
   const data = fetchData;
 
-  const handleCardClick = (id) => {
-    setSelected(id);
-  };
+  // const handleCardClick = (id) => {
+  //   setSelected(id);
+  // };
   const filteredTickets = selected
     ? data.filter((t) => t.id === selected)
     : data;
@@ -16,7 +17,7 @@ const Card = ({ fetchData, setSelected, selected }) => {
       <div className="grid lg:grid-cols-2 gap-4">
         {data.map((ticket) => (
           <div
-            onClick={() => handleCardClick(ticket)}
+            onClick={() => showSameTicket(ticket)}
             className=" mt-6 bg-[#FFFFFF] shadow-2xl p-5 rounded-xl"
           >
             <div className="flex justify-between items-center mb-2">
