@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import "./App.css";
 import Main from "./Component/Main/Main";
 import Navbar from "./Component/Navbar";
+import React from "react";
+import Footer from "./Component/footer";
 
 // const fetchData = async () => {
 //   const response = await fetch("/fetchData.json");
@@ -19,6 +21,9 @@ function App() {
       <Suspense fallback={<div>Loading...</div>}>
         <Main PromiseData={PromiseData}></Main>
       </Suspense>
+      <div className="w-full bg-black">
+        <Footer></Footer>
+      </div>
     </>
   );
 }

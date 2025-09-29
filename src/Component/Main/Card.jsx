@@ -1,4 +1,5 @@
 import React from "react";
+
 const Card = ({ fetchData, selected, showSameTicket }) => {
   const data = fetchData;
 
@@ -34,7 +35,7 @@ const Card = ({ fetchData, selected, showSameTicket }) => {
                 {ticket.status === "Open" ? "Open" : "In-Progress"}
               </button>
             </div>
-            <p className="text-[#627382]">{ticket.description}</p>
+            <p className="text-[#627382] h-[65px]">{ticket.description}</p>
             <div className="flex justify-between  items-center mt-2">
               <div className="flex gap-3">
                 <h3 className="text-[#627382]">{ticket.id}</h3>
@@ -52,7 +53,12 @@ const Card = ({ fetchData, selected, showSameTicket }) => {
               </div>
               <div className="flex gap-3 text-[#627382]">
                 <h3>{ticket.customer}</h3>
-                <h3>{ticket.createdAt}</h3>
+                <h3>
+                  <span>
+                    <i class="fa-regular fa-calendar"></i>
+                  </span>{" "}
+                  {ticket.createdAt}
+                </h3>
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { use } from "react";
+import React, { Suspense, use } from "react";
 import TwoCardLayout from "./TwoCardLayout";
 import TicketCard from "./TicketCard";
 
