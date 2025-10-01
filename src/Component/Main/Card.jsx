@@ -1,6 +1,5 @@
 import React from "react";
-import { ToastContainer, toast } from "react-toastify";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify";
 
 const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
   const data = fetchData;
@@ -9,13 +8,15 @@ const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
   // const handleCardClick = (id) => {
   //   setSelected(id);
   // };
-  const handleToast = () => {
-    toast.success("added to In-Progress");
+  const handleToast = (ticket) => {
+    toast.success(`${ticket.title}added to In-Progress`);
   };
+
   const filteredTickets = selected
     ? data.filter((t) => t.id === selected)
     : data;
   console.log(filteredTickets);
+
   return (
     <div className="">
       <h1 className="text-[#34485A] font-semibold text-2xl">
@@ -25,13 +26,12 @@ const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
         {data.map((ticket) => (
           <div
             onClick={() => {
-              handleToast();
+              handleToast(ticket);
               showSameTicket(ticket);
               handleAddToProgress();
             }}
             className=" mt-6 bg-[#FFFFFF] shadow-2xl p-5 rounded-xl"
           >
-            <ToastContainer />
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-medium text-[#001931] text-lg">
                 {ticket.title}

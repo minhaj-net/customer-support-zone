@@ -12,7 +12,6 @@ const TicketCard = ({
   const [selected, setSelected] = useState([]);
   const showSameTicket = (fetchData) =>
     setSelected((prev) => {
-      // duplicate avoid
       if (prev.find((t) => t.id === fetchData.id)) return prev;
       return [...prev, fetchData];
     });
@@ -23,7 +22,7 @@ const TicketCard = ({
   return (
     <div className="max-w-[1280px] mx-auto grid   grid-cols-12 gap-6 mt-12">
       <div className="col-span-12 lg:col-span-9">
-        <Suspense>
+        <Suspense fallback="">
           <Card
             fetchData={tickets}
             handleAddToProgress={handleAddToProgress}

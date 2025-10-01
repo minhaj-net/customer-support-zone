@@ -5,16 +5,15 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
   const [movedTasks, setMovedTasks] = useState([]);
 
   const handleMove = (ticket) => {
-    setMovedTasks((prev) => [...prev, ticket]); // নিচে add হবে
-    clearTask(ticket.id); // শুধু ওইটাকে remove করব
+    setMovedTasks((prev) => [...prev, ticket]);
+    clearTask(ticket.id);
   };
-  const handleToast = () => {
-    toast.success("Task marked as Completed");
+  const handleToast = (ticket) => {
+    toast.success(`${ticket.title} moved to Completed Tasks`);
   };
 
   return (
     <div className="space-y-4 text-center md:text-left">
-      {/* Top Section: Selected Tasks */}
       {selected.length > 0 ? (
         selected.map((ticket) => (
           <div
@@ -24,8 +23,9 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
             <h3 className="text-[#001931] text-lg">{ticket.title}</h3>
 
             <button
+              role="button"
               onClick={() => {
-                handleToast();
+                handleToast(ticket);
                 handleMove(ticket);
                 handleAddToResolved();
               }}
@@ -33,14 +33,13 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
             >
               Complete
             </button>
-            <ToastContainer />
           </div>
         ))
       ) : (
         <p className="">Select a ticket to add to Task Status</p>
       )}
 
-      {/* Bottom Section: Completed Tasks */}
+      {/* Bottom Section Completed Tasks */}
       <div className="mt-6">
         <h2 className="text-[#34485A] font-bold text-2xl mb-2">
           Completed Tasks

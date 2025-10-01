@@ -3,16 +3,14 @@ import React from "react";
 const Footer = () => {
   return (
     <>
-      {" "}
       (
-      <div className="max-w-[1280px] mx-auto md:p-0 p-3 mt-12 md:mt-20 bg-black text-white py-6 md:py-20 grid grid-cols-1 md:grid-cols-5 gap-4">
+      <div className="max-w-[1280px] mx-auto md:p-0 p-3 mt-12 bg-black text-white py-6 grid grid-cols-1 md:grid-cols-5 gap-12 mb-4 ">
         <div>
-          <h3 className="mb-4 font-bold text-2xl">CS — Ticket System</h3>
+          <h3 className="mb-2 font-bold text-2xl">CS — Ticket System</h3>
           <p className="text-[#A1A1AA]">
             Welcome to CS — Ticket System We’re here 24/7 to help you resolve
             issues quickly and efficiently. Our support team is always ready to
-            assist you with technical issues, account management, billing, and
-            product inquiries.
+            assist you with technical issues.
           </p>
         </div>
         <div>
