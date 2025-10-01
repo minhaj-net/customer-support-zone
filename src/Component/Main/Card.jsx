@@ -1,11 +1,15 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
 
-const Card = ({ fetchData, selected, showSameTicket }) => {
+const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
   const data = fetchData;
 
   // const handleCardClick = (id) => {
   //   setSelected(id);
   // };
+  const handleToast = () => {
+    toast("Ticket added to Task Status");
+  };
   const filteredTickets = selected
     ? data.filter((t) => t.id === selected)
     : data;
@@ -18,9 +22,14 @@ const Card = ({ fetchData, selected, showSameTicket }) => {
       <div className="grid lg:grid-cols-2 gap-4">
         {data.map((ticket) => (
           <div
-            onClick={() => showSameTicket(ticket)}
+            onClick={() => {
+              handleToast();
+              showSameTicket(ticket);
+              handleAddToProgress();
+            }}
             className=" mt-6 bg-[#FFFFFF] shadow-2xl p-5 rounded-xl"
           >
+            <ToastContainer />
             <div className="flex justify-between items-center mb-2">
               <h3 className="font-medium text-[#001931] text-lg">
                 {ticket.title}

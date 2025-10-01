@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 
-const Task = ({ selected, clearTask }) => {
+const Task = ({ selected, clearTask, handleAddToResolved }) => {
   const [movedTasks, setMovedTasks] = useState([]);
 
   const handleMove = (ticket) => {
@@ -20,7 +21,11 @@ const Task = ({ selected, clearTask }) => {
             <h3 className="text-[#001931] text-lg">{ticket.title}</h3>
 
             <button
-              onClick={() => handleMove(ticket)}
+              onClick={() => {
+                toast("THis is for checked");
+                handleMove(ticket);
+                handleAddToResolved();
+              }}
               className="btn btn-wide mt-3 !rounded-lg !bg-[#02A53B] text-white"
             >
               Complete
