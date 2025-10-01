@@ -8,6 +8,9 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
     setMovedTasks((prev) => [...prev, ticket]); // নিচে add হবে
     clearTask(ticket.id); // শুধু ওইটাকে remove করব
   };
+  const handleToast = () => {
+    toast.success("Task marked as Completed");
+  };
 
   return (
     <div className="space-y-4 text-center md:text-left">
@@ -22,14 +25,15 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
 
             <button
               onClick={() => {
-                toast("THis is for checked");
+                handleToast();
                 handleMove(ticket);
                 handleAddToResolved();
               }}
-              className="btn btn-wide mt-3 !rounded-lg !bg-[#02A53B] text-white"
+              className="btn btn-wide mt-3 !rounded-lg  !bg-[#02A53B] text-white"
             >
               Complete
             </button>
+            <ToastContainer />
           </div>
         ))
       ) : (

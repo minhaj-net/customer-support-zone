@@ -5,10 +5,6 @@ import Navbar from "./Component/Navbar";
 import React from "react";
 import Footer from "./Component/footer";
 
-// const fetchData = async () => {
-//   const response = await fetch("/fetchData.json");
-//   const data = await response.json();
-// };
 const fetchData = () => {
   return fetch("/fetchData.json").then((res) => res.json());
 };

@@ -1,16 +1,17 @@
-# React + Vite
+1. What is JSX, and why is it used?
+   JSX হলো JavaScript XML এর সংক্ষিপ্ত রূপ। এটা মূলত JavaScript এর ভেতরে HTML-এর মতো কোড লিখতে দেয়। এর মাধ্যমে আমরা UI কেমন হবে সেটা সহজে লিখতে পারি। JSX ব্যবহার করলে কোড অনেক readable হয় এবং React এর component গুলো তৈরি করা সহজ হয়ে যায়।
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+2. What is the difference between State and Props?
+   (1) State হলো component-এর ভেতরে data রাখার ব্যবস্থা, যেটা সময়ের সাথে সাথে পরিবর্তন হতে পারে।
+   (ii)Props হলো parent component থেকে child component এ পাঠানো data, যেটা child শুধু ব্যবহার করতে পারে কিন্তু সরাসরি পরিবর্তন করতে পারে না।
 
-Currently, two official plugins are available:
+   সহজভাবে বললে, State মানে component-এর নিজের data, আর Props মানে বাইরে থেকে আসা data।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+3. What is the useState hook, and how does it work?
+   useState হলো React-এর একটি hook, যেটা function component এর ভেতরে state তৈরি করতে দেয়। এটা একটা array return করে — প্রথমে থাকে state এর current value আর দ্বিতীয়টা থাকে function, যেটা দিয়ে state update করা যায়। যখনই আমরা state update করি, component আবার re-render হয় এবং নতুন data UI তে দেখা যায়।
 
-## React Compiler
+4. How can you share state between components in React?
+   State share করার জন্য সাধারণত state-টা parent component এ রাখা হয়, তারপর props এর মাধ্যমে child component গুলোতে পাঠানো হয়। এভাবে একাধিক component একই data ব্যবহার করতে পারে। আর যদি project বড় হয়, তখন Context API বা state management library ব্যবহার করা হয়।
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5. How is event handling done in React?
+   React এ event handling হয় JavaScript এর event এর মতোই, তবে এখানে camelCase ব্যবহার করতে হয় (যেমন onClick এর বদলে onclick নয়)। Event handler হিসেবে সাধারণত একটা function দেয়া হয়। যখন user event (যেমন click, change, submit) ট্রিগার করে, তখন সেই function call হয়।

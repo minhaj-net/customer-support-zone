@@ -1,14 +1,16 @@
 import React from "react";
 import { ToastContainer, toast } from "react-toastify";
+// import { toast } from "react-toastify";
 
 const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
   const data = fetchData;
+  console.log(data);
 
   // const handleCardClick = (id) => {
   //   setSelected(id);
   // };
   const handleToast = () => {
-    toast("Ticket added to Task Status");
+    toast.success("added to In-Progress");
   };
   const filteredTickets = selected
     ? data.filter((t) => t.id === selected)
