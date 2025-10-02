@@ -36,15 +36,35 @@ const Card = ({ fetchData, selected, showSameTicket, handleAddToProgress }) => {
               <h3 className="font-medium text-[#001931] text-lg">
                 {ticket.title}
               </h3>
-              <button
-                className={`bg-[#02A53B80] rounded-2xl px-4 py-1 ${
-                  ticket.status === "Open"
-                    ? "bg-[#02A53B80]"
-                    : "bg-[#9C770099] bg-opacity-30 "
-                }`}
-              >
-                {ticket.status === "Open" ? "Open" : "In-Progress"}
-              </button>
+              <div>
+                <button
+                  className={`bg-[#02A53B80] rounded-2xl px-4 py-1 ${
+                    ticket.status === "Open"
+                      ? "bg-[#02A53B80]"
+                      : "bg-[#9C770099] bg-opacity-30 "
+                  }`}
+                >
+                  {ticket.status === "Open" ? (
+                    <div className="flex gap-1">
+                      <img
+                        className="object-contain"
+                        src="https://i.ibb.co.com/XfH8b4Zw/Ellipse-22-1.png"
+                        alt="Open Ticket"
+                      />
+                      <p>Open</p>
+                    </div>
+                  ) : (
+                    <div className="flex gap-1">
+                      <img
+                        className="object-contain"
+                        src="https://i.ibb.co.com/238S2t2F/Ellipse-22-2.png"
+                        alt="In progress Ticket"
+                      />
+                      <p>In-Progress</p>
+                    </div>
+                  )}
+                </button>
+              </div>
             </div>
             <p className="text-[#627382] h-[65px]">{ticket.description}</p>
             <div className="flex justify-between  items-center mt-2">

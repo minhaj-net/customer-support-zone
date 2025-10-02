@@ -12,6 +12,7 @@ const Main = ({ PromiseData }) => {
   };
   const handleAddToResolved = () => {
     setResolvedCount((prev) => prev + 1);
+    setInProgressCount((prev) => prev - 1);
   };
   const fetchData = use(PromiseData);
   return (
