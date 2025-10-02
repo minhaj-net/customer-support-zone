@@ -36,7 +36,10 @@ const Task = ({ selected, clearTask, handleAddToResolved }) => {
           </div>
         ))
       ) : (
-        <p className="">Select a ticket to add to Task Status</p>
+        <div className="text-center  bg-white py-12 rounded-2xl shadow-lg">
+          <p className="text-gray-500">NO task in Progress</p>
+          <p className="text-gray-500">Click on a ticket to start working</p>
+        </div>
       )}
 
       {/* Bottom Section Completed Tasks */}

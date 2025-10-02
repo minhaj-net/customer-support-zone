@@ -1,7 +1,7 @@
 [
   {
     "id": "#1001",
-    "title": "Login Issue - Cannot access",
+    "title": "Login Issue",
     "description": "Customer is unable to log into the account after resetting the password. They keep receiving an error message during login attempts.",
     "customer": "John Doe",
     "priority": "High Priority",
@@ -19,7 +19,7 @@
   },
   {
     "id": "#1003",
-    "title": "Shipping Delay - Package not arrived",
+    "title": "Shipping Delay",
     "description": "The package has not arrived even after 7 days of dispatch. Customer is concerned about the delivery status.",
     "customer": "Michael Smith",
     "priority": "Low Priority",
@@ -28,7 +28,7 @@
   },
   {
     "id": "#1004",
-    "title": "Refund Request - Defective product",
+    "title": "Refund Request",
     "description": "Customer requested a refund due to receiving a defective product. They also asked for an update on the refund timeline.",
     "customer": "Sophia Johnson",
     "priority": "High Priority",
@@ -37,7 +37,7 @@
   },
   {
     "id": "#1005",
-    "title": "Feature Inquiry - Bulk order",
+    "title": "Feature Inquiry",
     "description": "Customer wants to know if a bulk order feature is available in the system. They are considering placing a large order next month.",
     "customer": "Liam Brown",
     "priority": "Low Priority",
@@ -55,7 +55,7 @@
   },
   {
     "id": "#1007",
-    "title": "Account Locked - Cannot login",
+    "title": "Account Locked ",
     "description": "Customer’s account was locked after multiple failed login attempts. They need the support team to unlock it.",
     "customer": "Ethan Wilson",
     "priority": "Medium Priority",
@@ -64,7 +64,7 @@
   },
   {
     "id": "#1008",
-    "title": "Order Cancellation - Refund requested",
+    "title": "Order Cancellation ",
     "description": "Customer requested cancellation of an order placed by mistake. They also want confirmation that payment will be refunded.",
     "customer": "Ava Martinez",
     "priority": "High Priority",
@@ -73,7 +73,7 @@
   },
   {
     "id": "#1009",
-    "title": "App Crash - Cannot use features",
+    "title": "App Crash ",
     "description": "Mobile app crashes immediately after opening. Customer is unable to use any of the features properly.",
     "customer": "Noah Taylor",
     "priority": "High Priority",
@@ -82,7 +82,7 @@
   },
   {
     "id": "#1010",
-    "title": "Subscription Inquiry - Premium plans",
+    "title": "Subscription Inquiry ",
     "description": "Customer wants to know details about premium subscription plans. They also asked if there is a student discount available.",
     "customer": "Mia Anderson",
     "priority": "Low Priority",
@@ -100,7 +100,7 @@
   },
   {
     "id": "#1012",
-    "title": "Wrong Item Delivered - Exchange requested",
+    "title": "Wrong Item Delivered ",
     "description": "Customer received the wrong product in their shipment. They are requesting an exchange or refund as soon as possible.",
     "customer": "Isabella White",
     "priority": "High Priority",
@@ -109,7 +109,7 @@
   },
   {
     "id": "#1013",
-    "title": "App Slow Performance - lagging",
+    "title": "App Slow Performance",
     "description": "Customer reported that the app is taking too long to load pages. They also noticed frequent lag during checkout.",
     "customer": "Lucas Harris",
     "priority": "Medium Priority",
